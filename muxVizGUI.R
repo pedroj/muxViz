@@ -2,24 +2,24 @@ if(version$major<3 || (version$major==3 && version$minor<2.0)){
     stop(paste("WARNING! muxViz requires R 3.2.x or higher in order to work properly. \nPlease update your R framework.\n"))
 }
 
-if(!require(devtools)){
-    install.packages("devtools")
-}
-if(!require(shiny)){
-    #install.packages("shiny")
-    install.packages("shiny")
-    library(devtools)
-    devtools::install_github("trestletech/ShinyDash")
-    devtools::install_github("rstudio/shiny-incubator")
-}else{
-    #check the version, and in case update to the latest one
-    if(packageDescription("shiny")$Version!="0.12.1" && packageDescription("shiny")$Version!="0.12.2"){
-        #install.packages("shiny")        
-        library(devtools)
-        install.packages("shiny")
-        #devtools::install_github("rstudio/shiny")
-    }
-}
+# if(!require(devtools)){
+#     install.packages("devtools")
+# }
+# if(!require(shiny)){
+#     #install.packages("shiny")
+#     install.packages("shiny")
+#     library(devtools)
+#     devtools::install_github("trestletech/ShinyDash")
+#     devtools::install_github("rstudio/shiny-incubator")
+# }else{
+#     #check the version, and in case update to the latest one
+#     if(packageDescription("shiny")$Version!="0.12.1" && packageDescription("shiny")$Version!="0.12.2"){
+#         #install.packages("shiny")        
+#         library(devtools)
+#         install.packages("shiny")
+#         #devtools::install_github("rstudio/shiny")
+#     }
+# }
 if(!require(shinyjs)){
     install.packages("shinyjs")
 }
